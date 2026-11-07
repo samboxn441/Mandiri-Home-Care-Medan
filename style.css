@@ -9,6 +9,38 @@ html {
   display: none;
   cursor: pointer;
 }
+/* Tambahan Navigasi Menu */
+.menu-nav {
+  display: flex;
+  gap: 20px;
+}
+
+#menuBtn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #menuBtn {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    right: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    z-index: 999;
+  }
+
+  .menu-nav.active {
+    display: flex;
+  }
+}
 
 /* Tombol kembali ke halaman utama */
 .back-home {
